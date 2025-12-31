@@ -51,6 +51,8 @@ interface ThisWeekEpisode {
   still_path: string | null;
   season_poster_path: string | null;
   addonId?: string;
+  addonDescription?: string;
+  addonPoster?: string;
   // Grouping fields
   isGroup?: boolean;
   episodeCount?: number;
