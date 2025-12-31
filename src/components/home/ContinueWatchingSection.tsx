@@ -36,6 +36,9 @@ interface ContinueWatchingItem extends StreamingContent {
   episode?: number;
   episodeTitle?: string;
   addonId?: string;
+  addonPoster?: string;
+  addonDescription?: string;
+  addonName?: string;
 }
 
 // Define the ref interface
