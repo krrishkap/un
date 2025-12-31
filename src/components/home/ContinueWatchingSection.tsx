@@ -673,7 +673,7 @@ const ContinueWatchingSection = React.forwardRef<ContinueWatchingRef>((props, re
                   type: 'movie',
                   progress: item.progress,
                   lastUpdated: pausedAt,
-                  addonId: progress.addonId,
+                  addonId: undefined,
                 } as ContinueWatchingItem);
 
                 logger.log(`📺 [TraktPlayback] Adding movie ${item.movie.title} with ${item.progress.toFixed(1)}% progress`);
@@ -707,7 +707,7 @@ const ContinueWatchingSection = React.forwardRef<ContinueWatchingRef>((props, re
                   season: item.episode.season,
                   episode: item.episode.number,
                   episodeTitle: item.episode.title || `Episode ${item.episode.number}`,
-                  addonId: progress.addonId,
+                  addonId: undefined,
                 } as ContinueWatchingItem);
 
                 processedShows.add(showImdb);
@@ -776,7 +776,7 @@ const ContinueWatchingSection = React.forwardRef<ContinueWatchingRef>((props, re
                     season: nextEpisodeVideo.season,
                     episode: nextEpisodeVideo.episode,
                     episodeTitle: `Episode ${nextEpisodeVideo.episode}`,
-                    addonId: progress.addonId,
+                    addonId: undefined,
                   } as ContinueWatchingItem);
                 }
               }
