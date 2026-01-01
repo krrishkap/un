@@ -64,9 +64,9 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x android/gradlew
 
-      - name: Build Android Debug APK
+      - name: Build Android release APK
         working-directory: android
-        run: ./gradlew assembleDebug
+        run: ./gradlew assembleRelease
 
       - name: List files in android output directory
         run: ls -R android/app/build/outputs/
@@ -75,5 +75,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: app-debug
-          path: android/app/build/outputs/apk/debug/app-arm64-v8a-debug.apk
+          path: android/app/build/outputs/apk/debug/app-arm64-v8a-release.apk
           
