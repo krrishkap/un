@@ -68,6 +68,9 @@ jobs:
         working-directory: android
         run: ./gradlew assembleDebug
 
+      - name: List files in android output directory
+        run: ls -R android/app/build/outputs/
+
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
