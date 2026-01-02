@@ -1,11 +1,9 @@
 # .github/workflows/android-build.yml
-name: Android Debug Build
+name: Android Release Build
 
 on:
   push:
-    branches: [patch-4, main]
-  pull_request:
-    branches: [patch-4, main]
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
@@ -74,6 +72,6 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: app-debug
-          path: android/app/build/outputs/apk/release/app-arm64-v8a-release.apk
+          name: app-release
+          path: android/app/build/outputs/apk/release/*
           
